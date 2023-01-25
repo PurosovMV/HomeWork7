@@ -34,6 +34,23 @@ void FillArray(int[,] matr)
     }
 }
 
+void Product(int[,] matr, int arg1, int arg2)
+{
+    int row = matr.GetLength(0);
+    int col = matr.GetLength(1);
+    if (row - 1 < arg1)
+    {
+        Console.WriteLine("нет такого элемента");
+    }
+    else if (col - 1 < arg2)
+    {
+        Console.WriteLine("нет такого элемента");
+    }
+    else
+    {
+        Console.WriteLine(matr[arg1, arg2]);
+    }
+}
 
 
 int m = ReadInput("Введите номер строки матрицы: ");
@@ -41,20 +58,7 @@ int n = ReadInput("Введите номер столбца матрицы: ");
 int[,] newmatrix = new int[5, 5];
 FillArray(newmatrix);
 PrintArray(newmatrix);
-int row = newmatrix.GetLength(0);
-int col = newmatrix.GetLength(1);
-if (row - 1 < m)
-{
-    Console.WriteLine("нет такого элемента");
-}
-else if (col - 1 < n)
-{
-    Console.WriteLine("нет такого элемента");
-}
-else
-{
-    Console.WriteLine(newmatrix[m, n]);
-}
+Product(newmatrix, m, n);
 
 
 
