@@ -44,7 +44,7 @@ void Product(int[,] matr) //Нахождение среднего арифмет
         {
             sum += matr[i, j];
         }
-        Console.Write($"{sum / matr.GetLength(0)}; ");
+        Console.Write($"{sum / matr.GetLength(0):F2}; ");
     }
 }
 
